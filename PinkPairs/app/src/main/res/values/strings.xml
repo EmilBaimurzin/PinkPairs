@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PinkPairs</string>
+    <string name="pause">Pause</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="time">time</string>
+    <string name="_continue">Continue</string>
+    <string name="sound">Sound</string>
+</resources>

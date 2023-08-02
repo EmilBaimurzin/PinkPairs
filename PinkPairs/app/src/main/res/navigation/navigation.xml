@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMain">
+
+    <fragment
+        android:id="@+id/fragmentMain"
+        android:name="com.pink.game.ui.main.FragmentMain"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMain_to_fragmentChoice"
+            app:destination="@id/fragmentChoice" />
+        <action
+            android:id="@+id/action_fragmentMain_to_dialogSettings"
+            app:destination="@id/dialogSettings" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentChoice"
+        android:name="com.pink.game.ui.choice.FragmentChoice"
+        android:label="FragmentChoice" >
+        <action
+            android:id="@+id/action_fragmentChoice_to_fragmentGame"
+            app:destination="@id/fragmentGame" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGame"
+        android:name="com.pink.game.ui.game.FragmentGame"
+        android:label="FragmentGame" >
+        <argument
+            android:name="difficulty"
+            app:argType="com.pink.game.domain.game.Difficulty" />
+        <action
+            android:id="@+id/action_fragmentGame_to_dialogEnd"
+            app:destination="@id/dialogEnd" />
+        <action
+            android:id="@+id/action_fragmentGame_to_dialogSettings"
+            app:destination="@id/dialogSettings" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogEnd"
+        android:name="com.pink.game.ui.dialogs.DialogEnd"
+        android:label="DialogEnd" >
+        <argument
+            android:name="difficulty"
+            app:argType="com.pink.game.domain.game.Difficulty" />
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogSettings"
+        android:name="com.pink.game.ui.dialogs.DialogSettings"
+        android:label="DialogSettings" />
+</navigation>

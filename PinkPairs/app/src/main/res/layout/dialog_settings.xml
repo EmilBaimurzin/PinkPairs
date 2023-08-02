@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_margin="20dp"
+        android:layout_height="240dp"
+        android:background="@drawable/bg_dialog">
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/BasicText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/sound"
+            android:textColor="#280D43"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_marginHorizontal="15dp"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:background="@drawable/bg_sound"
+            app:layout_constraintBottom_toBottomOf="@+id/speedSlider"
+            app:layout_constraintEnd_toEndOf="@+id/speedSlider"
+            app:layout_constraintStart_toStartOf="@+id/speedSlider"
+            app:layout_constraintTop_toTopOf="@+id/speedSlider" />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/speedSlider"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:background="@android:color/transparent"
+            android:value="3"
+            android:valueFrom="1"
+            android:valueTo="5"
+            android:stepSize="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:tickColorActive="@android:color/transparent"
+            app:tickColorInactive="@android:color/transparent"
+            app:trackColor="@android:color/transparent"
+            tools:layout_editor_absoluteX="30dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.pink.game.core.library.CustomImageButton
+        android:id="@+id/button_close"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_close"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"/>
+
+    <com.pink.game.core.library.CustomImageButton
+        android:id="@+id/button_apply"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/button_ok"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="10dp"/>
+
+</FrameLayout>
