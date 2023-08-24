@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.pink.game'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.pink.game"
@@ -51,13 +51,13 @@ dependencies {
 
     //ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
-    implementation "androidx.fragment:fragment-ktx:1.6.0"
+    implementation "androidx.fragment:fragment-ktx:1.6.1"
 
     //LiveData
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
     implementation "androidx.lifecycle:lifecycle-common-java8:2.6.1"
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
     //Navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.6.0"
+    implementation "androidx.navigation:navigation-fragment-ktx:2.7.1"
 
 }

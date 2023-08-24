@@ -34,10 +34,6 @@ class CustomButton(context: Context, attr: AttributeSet) : AppCompatTextView(con
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-    }
-
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
     }
@@ -66,10 +62,6 @@ class CustomLayoutButton(context: Context, attr: AttributeSet) : LinearLayout(co
             }
             false
         }
-    }
-
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
@@ -102,9 +94,6 @@ class CustomImageButton(context: Context, attr: AttributeSet) : AppCompatImageVi
         }
     }
 
-    override fun onDraw(canvas: Canvas?) {
-        super.onDraw(canvas)
-    }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
